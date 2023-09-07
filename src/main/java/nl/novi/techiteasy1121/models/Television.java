@@ -18,10 +18,10 @@ public class Television {
     private String brand;
     private String name;
     private Double price;
-    private Double availableSize;
+    private AvailableSize availableSize;
     private Double refreshRate;
     private String screenType;
-    private String screenQuality;
+    private ScreenQuality screenQuality;
     private Boolean smartTv;
     private Boolean wifi;
     private Boolean voiceControl;
@@ -99,7 +99,7 @@ public class Television {
         return price;
     }
 
-    public Double getAvailableSize() {
+    public AvailableSize getAvailableSize() {
         return availableSize;
     }
 
@@ -111,7 +111,7 @@ public class Television {
         return screenType;
     }
 
-    public String getScreenQuality() {
+    public ScreenQuality getScreenQuality() {
         return screenQuality;
     }
 
@@ -168,7 +168,7 @@ public class Television {
         this.price = price;
     }
 
-    public void setAvailableSize(Double availableSize) {
+    public void setAvailableSize(AvailableSize availableSize) {
         this.availableSize = availableSize;
     }
 
@@ -180,7 +180,7 @@ public class Television {
         this.screenType = screenType;
     }
 
-    public void setScreenQuality(String screenQuality) {
+    public void setScreenQuality(ScreenQuality screenQuality) {
         this.screenQuality = screenQuality;
     }
 

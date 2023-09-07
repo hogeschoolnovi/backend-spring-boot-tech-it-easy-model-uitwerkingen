@@ -7,6 +7,7 @@ import nl.novi.techiteasy1121.repositories.TelevisionRepository;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
+import java.time.LocalDate;
 import java.util.List;
 import java.util.Optional;
 
@@ -76,6 +77,9 @@ public class TelevisionController {
     // We geven hier een television mee in de parameter. Zorg dat je JSON object exact overeenkomt met het Television object.
     @PostMapping("/televisions")
     public ResponseEntity<Television> addTelevision(@RequestBody Television television) {
+
+        // Er vanuitgaande dat televisies direct in de applicatie worden teogevoegd als ze gekocht zijn.
+        television.setOriginalStock(LocalDate.now());
 
         // Sla de nieuwe tv in de database op met de save-methode van de repository
         Television returnTelevision = televisionRepository.save(television);
@@ -195,9 +199,8 @@ public class TelevisionController {
             if (newTelevision.getWifi() != null) {
                 television1.setWifi(newTelevision.getWifi());
             }
-            // Sla de gewijzigde waarden op in de database onder dezelfde id. Dit moet je niet vergeten.
+
             Television returnTelevision = televisionRepository.save(television1);
-            // Return de nieuwe versie van deze tv en een 200 code
             return ResponseEntity.ok().body(returnTelevision);
         }
 

@@ -2,6 +2,8 @@ package nl.novi.techiteasy1121.models;
 
 import jakarta.persistence.*;
 
+import java.time.LocalDate;
+
 @Entity
 public class Television {
 
@@ -26,8 +28,8 @@ public class Television {
     private Boolean hdr;
     private Boolean bluetooth;
     private Boolean ambiLight;
-    private Integer originalStock;
-    private Integer sold;
+    private LocalDate originalStock;
+    private LocalDate sold;
 
 //    Constructors hoeven niet per se aangemaakt te worden. Java maakt automatisch een default constructor (achter de schermen).
 //    Let er op dat wanneer je een eigen constructor maakt, bijvoorbeeld een constructor met alle gevraagde variabelen,
@@ -137,11 +139,11 @@ public class Television {
         return ambiLight;
     }
 
-    public Integer getOriginalStock() {
+    public LocalDate getOriginalStock() {
         return originalStock;
     }
 
-    public Integer getSold() {
+    public LocalDate getSold() {
         return sold;
     }
 
@@ -206,11 +208,11 @@ public class Television {
         this.ambiLight = ambiLight;
     }
 
-    public void setOriginalStock(Integer originalStock) {
+    public void setOriginalStock(LocalDate originalStock) {
         this.originalStock = originalStock;
     }
 
-    public void setSold(Integer sold) {
+    public void setSold(LocalDate sold) {
         this.sold = sold;
     }
 

@@ -31,7 +31,8 @@ _De volgorde van de mappen, controllers, models, repositories en exceptions is n
 
 - Aan alle randvoorwaarden moet zijn voldaan
 
-- De repository moet goed aan de service gekoppeld zijn met constructor injection (of via `@Autowired`)
+- De repository moet goed aan de controller gekoppeld zijn met constructor injection (of via `@Autowired`)
+ "Let op: volgende les zetten we nog een service-laag tussen de controller en de repository"
 
 - De POM.xml bevat dependencies voor _Spring Web_, _Spring Data Jpa_ en _PostgreSQL Driver_
 
